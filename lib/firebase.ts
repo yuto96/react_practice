@@ -14,7 +14,6 @@ if (typeof window !== 'undefined' && firebase.apps.length === 0) {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
   }
-
   firebase.initializeApp(firebaseConfig)
   firebase.analytics()
 }
