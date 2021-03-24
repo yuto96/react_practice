@@ -15,6 +15,7 @@ export default function UserShow() {
     if (query.uid === undefined) {
         return
       }
+    
     async function loadUser() {
       console.log(query)
       const doc = await firebase
@@ -34,6 +35,5 @@ export default function UserShow() {
     }
     loadUser()
   }, [query.uid])
-
   return <div>{user ? user.name : 'ロード中…'}</div>
 }
